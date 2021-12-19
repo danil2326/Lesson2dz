@@ -11,113 +11,110 @@
 
 
     <Button
-        android:layout_margin="5dp"
-        android:text="1"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="1" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="2"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:padding="5dp"
+        android:layout_margin="1dp"
+        android:text="2" />
 
 
     <Button
-        android:layout_margin="5dp"
-        android:text="3"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:padding="5dp"
+        android:layout_margin="1dp"
+        android:text="3" />
 
 
     <Button
-        android:layout_margin="5dp"
         android:background="#72FFE0E0"
+        android:layout_margin="1dp"
+        android:padding="5dp"
         android:text="+"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"
+
         />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="4"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
+        android:text="4" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="5"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:layout_margin="1dp"
+        android:padding="5dp"
 
-
-    <Button
-        android:layout_margin="5dp"
-        android:text="6"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:text="5" />
 
 
     <Button
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
+        android:text="6" />
+
+
+    <Button
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
         android:background="#72FFE0E0"
-        android:text="-"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:text="-" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="7"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
+        android:text="7" />
 
 
     <Button
-        android:layout_margin="5dp"
-        android:text="8"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
+        android:text="8" />
 
 
     <Button
-        android:layout_margin="5dp"
-        android:text="9"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
+        android:text="9" />
 
     <Button
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
         android:background="#72FFE0E0"
-        android:text="="
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:text="=" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="0"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
+        android:text="0" />
 
     <Button
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
         android:background="#72FFE0E0"
-        android:text="x"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:text="x" />
 
     <Button
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
         android:background="#72FFE0E0"
-        android:text="/"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:text="/" />
 
     <Button
-        android:layout_margin="5dp"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+
         android:background="#72FFE0E0"
-        android:text="."
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:text="." />
 
 
 </GridLayout>
