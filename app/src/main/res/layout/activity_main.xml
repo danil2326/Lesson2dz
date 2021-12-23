@@ -14,10 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_columnSpan="4"
         android:hint="Ввод"
+        android:inputType="number"
         android:textAlignment="center"
         android:textSize="50sp"
-        android:inputType="number"
-        android:textStyle="italic"/>
+        android:textStyle="italic" />
 
     <Button
         android:id="@+id/button_1"
@@ -44,7 +44,7 @@
         android:layout_margin="1dp"
         android:background="#72FFE0E0"
         android:padding="5dp"
-        android:text="+"/>
+        android:text="+" />
 
     <Button
         android:id="@+id/button_4"
@@ -129,32 +129,32 @@
 
     <Button
         android:id="@+id/button_erase"
-        android:layout_height="match_parent"
         android:layout_width="wrap_content"
-        android:layout_columnSpan="2"
-        android:text="AC"
-        android:padding="5dp"
-        android:layout_gravity="fill" />
-    <Button
-        android:id="@+id/second_button"
         android:layout_height="match_parent"
-        android:layout_width="wrap_content"
         android:layout_columnSpan="2"
         android:layout_gravity="fill"
-        android:text="Второй экран"
-        android:padding="5dp"/>
+        android:padding="5dp"
+        android:text="AC" />
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:padding="5dp"
+        android:text="Второй экран" />
+
     <TextView
         android:id="@+id/text_result"
-        android:layout_height="match_parent"
         android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_columnSpan="4"
+        android:layout_gravity="fill"
         android:hint="Результат"
         android:textAlignment="center"
         android:textSize="50sp"
-        android:layout_gravity="fill"
-        android:textStyle="italic"/>
-
-
+        android:textStyle="italic" />
 
 
 </GridLayout>
