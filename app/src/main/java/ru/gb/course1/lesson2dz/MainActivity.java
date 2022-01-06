@@ -21,6 +21,7 @@ import static ru.gb.course1.lesson2dz.InputSymbol.OP_PLUS;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
@@ -31,6 +32,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String KEY = "key";
+    private int number = 0;
     private TextView textInput;
     private Button button1;
     private Button button2;
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonDivide;
     private Button buttonDot;
     private Button buttonClear;
+    private Button buttonSecond;
     private TextView textResult;
     private CalculatorModel calculatorModel;
 
@@ -57,10 +61,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
         calculatorModel = new CalculatorModel();
+        initView();
         initListener();
+        if (savedInstanceState != null && savedInstanceState.containsKey(KEY)) {
+            number = savedInstanceState.getInt(KEY);
+            textInput.setText(String.valueOf(number));
+        }
+        findViewById(R.id.second_button).setOnClickListener(view -> {
+            Intent intent = new Intent(this, SecondActivity.class);
+            intent.putExtra("extra_key", number);
+            startActivity(intent);
+        });
 
+
+
+    }
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(KEY, number);
 
     }
 
@@ -69,112 +89,146 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_1);
+
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_2);
+
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_3);
+
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_4);
+                showInput();
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_5);
+
             }
         });
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_6);
+
             }
         });
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_7);
+
             }
         });
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_8);
+
             }
         });
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_9);
+
             }
         });
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_0);
+
             }
         });
         buttonMinuse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateInput(OP_MINUS);
+                updateInputOp(OP_MINUS);
+
             }
         });
         buttonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateInput(OP_PLUS);
+                updateInputOp(OP_PLUS);
+
             }
         });
         buttonDot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateInput(OP_DOT);
+                updateInputOp(OP_DOT);
+
             }
         });
         buttonMyltiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateInput(OP_MYLTYPLI);
+                updateInputOp(OP_MYLTYPLI);
+
             }
         });
         buttonDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateInput(OP_DIVIDE);
+                updateInputOp(OP_DIVIDE);
+
             }
         });
         buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateInput(OP_CLEAR);
+                updateInputOp(OP_CLEAR);
+
             }
         });
         buttonEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                updateInput(OP_EQUALS);
+                updateInputOp(OP_EQUALS);
+
             }
         });
+
+
 
 
     }
 
     private void updateInput(InputSymbol inputSymbol) {
+
+
         calculatorModel.onClickButton(inputSymbol);
         List<InputSymbol> inputSymbolList = calculatorModel.getInput();
         textInput.setText(convertInputSymbolToString(inputSymbolList));
+        showInput();
+
+
+    }
+    private void updateInputOp(InputSymbol inputSymbol) {
+
+
+        calculatorModel.onClickButton(inputSymbol);
+        List<InputSymbol> inputSymbolList = calculatorModel.getInput();
+        textInput.setText(convertInputSymbolToString(inputSymbolList));
+
+
+
     }
 
     private String convertInputSymbolToString(List<InputSymbol> inputSymbolList) {
@@ -253,9 +307,15 @@ public class MainActivity extends AppCompatActivity {
         buttonDot = findViewById(R.id.button_dot);
         buttonMinuse = findViewById(R.id.button_minus);
         buttonEquals = findViewById(R.id.button_equals);
-        textInput = findViewById(R.id.text_input);
+        buttonSecond = findViewById(R.id.second_button);
         textResult = findViewById(R.id.text_result);
 
+        textInput = findViewById(R.id.text_input);
+
+    }
+    private void showInput() {
+        number = Integer.parseInt(textInput.getText().toString());
+        textInput.setText(String.valueOf(number));
     }
 
 
