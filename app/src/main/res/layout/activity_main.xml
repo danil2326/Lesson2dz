@@ -3,121 +3,157 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_height="wrap_content"
     android:columnCount="4"
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/text_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="4"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="italic" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="1"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:id="@+id/button_1"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="1" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="2"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
-
-
-    <Button
-        android:layout_margin="5dp"
-        android:text="3"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:id="@+id/button_2"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="2" />
 
 
     <Button
-        android:layout_margin="5dp"
+        android:id="@+id/button_3"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="3" />
+
+
+    <Button
+        android:id="@+id/button_plus"
+        android:layout_margin="1dp"
         android:background="#72FFE0E0"
-        android:text="+"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"
-        />
+        android:padding="5dp"
+        android:text="+" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="4"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:id="@+id/button_4"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="4" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="5"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:id="@+id/button_5"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="5" />
 
 
     <Button
-        android:layout_margin="5dp"
-        android:text="6"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:id="@+id/button_6"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="6" />
 
 
     <Button
-        android:layout_margin="5dp"
+        android:id="@+id/button_minus"
+        android:layout_margin="1dp"
         android:background="#72FFE0E0"
-        android:text="-"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:padding="5dp"
+        android:text="-" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="7"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
-
-
-    <Button
-        android:layout_margin="5dp"
-        android:text="8"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:id="@+id/button_7"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="7" />
 
 
     <Button
-        android:layout_margin="5dp"
-        android:text="9"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:id="@+id/button_8"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="8" />
+
 
     <Button
-        android:layout_margin="5dp"
+        android:id="@+id/button_9"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="9" />
+
+    <Button
+        android:id="@+id/button_equals"
+        android:layout_margin="1dp"
         android:background="#72FFE0E0"
-        android:text="="
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:padding="5dp"
+        android:text="=" />
 
     <Button
-        android:layout_margin="5dp"
-        android:text="0"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:id="@+id/button_null"
+        android:layout_margin="1dp"
+        android:padding="5dp"
+        android:text="0" />
 
     <Button
-        android:layout_margin="5dp"
+        android:id="@+id/button_multiply"
+        android:layout_margin="1dp"
         android:background="#72FFE0E0"
-        android:text="x"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:padding="5dp"
+        android:text="x" />
 
     <Button
-        android:layout_margin="5dp"
+        android:id="@+id/button_divide"
+        android:layout_margin="1dp"
         android:background="#72FFE0E0"
-        android:text="/"
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1"/>
+        android:padding="5dp"
+        android:text="/" />
 
     <Button
-        android:layout_margin="5dp"
+        android:id="@+id/button_dot"
+        android:layout_margin="1dp"
         android:background="#72FFE0E0"
-        android:text="."
-        android:layout_gravity="center_horizontal"
-        android:layout_columnWeight="1" />
+        android:padding="5dp"
+        android:text="." />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:padding="5dp"
+        android:text="AC" />
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_columnSpan="2"
+        android:layout_gravity="fill"
+        android:padding="5dp"
+        android:text="Второй экран" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_columnSpan="4"
+        android:layout_gravity="fill"
+        android:hint="Результат"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="italic" />
 
 
 </GridLayout>
