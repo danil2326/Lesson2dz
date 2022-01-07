@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="my_button_number">
+        <item name="android:backgroundTint">#00D4AA</item>
+        <item name="strokeWidth">7dp</item>
+        <item name="strokeColor">#FFF200</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
+    <style name="my_button_op">
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:backgroundTint">#FF6D00</item>
+        <item name="strokeWidth">7dp</item>
+        <item name="strokeColor">@color/purple_700</item>
+        <item name="android:padding">5dp</item>
+
+    </style>
+
+    <style name="my_button_a">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_columnSpan">2</item>
+        <item name="android:layout_gravity">fill</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:backgroundTint">#FFD600</item>
+    </style>
+</resources>

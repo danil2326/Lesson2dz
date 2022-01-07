@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonDot;
     private Button buttonClear;
     private Button buttonSecond;
-    private TextView textResult;
     private CalculatorModel calculatorModel;
 
 
@@ -308,7 +307,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMinuse = findViewById(R.id.button_minus);
         buttonEquals = findViewById(R.id.button_equals);
         buttonSecond = findViewById(R.id.second_button);
-        textResult = findViewById(R.id.text_result);
+
 
         textInput = findViewById(R.id.text_input);
 
