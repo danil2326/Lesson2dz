@@ -18,7 +18,7 @@
         android:textSize="50sp"
         android:textStyle="italic" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
         android:layout_margin="1dp"
         android:padding="5dp"
