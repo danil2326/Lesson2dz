@@ -10,13 +10,7 @@
 
     <TextView
         android:id="@+id/text_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_columnSpan="5"
-        android:inputType="number"
-        android:textAlignment="center"
-        android:textSize="50sp"
-        android:textStyle="italic" />
+        style="@style/my_text_input_land" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
@@ -81,7 +75,7 @@
         style="@style/my_button_op"
         android:text="-" />
 
-        <com.google.android.material.button.MaterialButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_multiply"
         style="@style/my_button_op"
         android:text="x" />
@@ -110,11 +104,6 @@
         android:id="@+id/button_dot"
         style="@style/my_button_op"
         android:text="." />
-
-
-
-
-
 
 
 </GridLayout>
