@@ -4,13 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:columnCount="4"
+    android:columnCount="5"
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/text_input"
-        style="@style/my_text_input" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="5"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textStyle="italic" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_1"
@@ -28,12 +34,6 @@
         style="@style/my_button_number"
         android:text="3" />
 
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_plus"
-        style="@style/my_button_op"
-        android:text="+" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_4"
         style="@style/my_button_number"
@@ -50,17 +50,10 @@
         style="@style/my_button_number"
         android:text="6" />
 
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_minus"
-        style="@style/my_button_op"
-        android:text="-" />
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_7"
         style="@style/my_button_number"
         android:text="7" />
-
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_8"
@@ -74,16 +67,21 @@
         android:text="9" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_equals"
-        style="@style/my_button_op"
-        android:text="=" />
-
-    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_null"
         style="@style/my_button_number"
         android:text="0" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_equals"
+        style="@style/my_button_op"
+        android:text="=" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_minus"
+        style="@style/my_button_op"
+        android:text="-" />
+
+        <com.google.android.material.button.MaterialButton
         android:id="@+id/button_multiply"
         style="@style/my_button_op"
         android:text="x" />
@@ -94,9 +92,14 @@
         android:text="/" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_dot"
+        android:id="@+id/button_plus"
         style="@style/my_button_op"
-        android:text="." />
+        android:text="+" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/second_button"
+        style="@style/my_button_a"
+        android:text="Второй экран" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_clear"
@@ -104,9 +107,11 @@
         android:text="AC" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/second_button"
-        style="@style/my_button_a"
-        android:text="Второй экран" />
+        android:id="@+id/button_dot"
+        style="@style/my_button_op"
+        android:text="." />
+
+
 
 
 
