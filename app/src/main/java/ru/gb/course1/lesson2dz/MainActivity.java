@@ -63,10 +63,15 @@ public class MainActivity extends AppCompatActivity {
         calculatorModel = new CalculatorModel();
         initView();
         initListener();
+
+
+
         if (savedInstanceState != null && savedInstanceState.containsKey(KEY)) {
             number = savedInstanceState.getInt(KEY);
-            textInput.setText(String.valueOf(number));
+
         }
+
+
         findViewById(R.id.second_button).setOnClickListener(view -> {
             Intent intent = new Intent(this, SecondActivity.class);
             intent.putExtra("extra_key", number);
@@ -84,10 +89,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initListener() {
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_1);
+
 
             }
         });
@@ -109,13 +116,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_4);
-                showInput();
+
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_5);
+
 
             }
         });
@@ -124,12 +132,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 updateInput(NUM_6);
 
+
             }
         });
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_7);
+
 
             }
         });
@@ -138,12 +148,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 updateInput(NUM_8);
 
+
             }
         });
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInput(NUM_9);
+
 
             }
         });
@@ -152,12 +164,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 updateInput(NUM_0);
 
+
             }
         });
         buttonMinuse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateInputOp(OP_MINUS);
+
 
             }
         });
@@ -215,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
         calculatorModel.onClickButton(inputSymbol);
         List<InputSymbol> inputSymbolList = calculatorModel.getInput();
         textInput.setText(convertInputSymbolToString(inputSymbolList));
-        showInput();
+
 
 
     }
@@ -283,8 +297,10 @@ public class MainActivity extends AppCompatActivity {
                     sb.append("=");
                     break;
             }
+
         }
         return sb.toString();
+
     }
 
 
@@ -310,6 +326,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         textInput = findViewById(R.id.text_input);
+
 
     }
     private void showInput() {

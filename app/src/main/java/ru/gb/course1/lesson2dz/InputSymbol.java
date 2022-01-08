@@ -17,9 +17,7 @@ public enum InputSymbol {
     OP_EQUALS,
     OP_MYLTYPLI,
     OP_DIVIDE,
-    OP_CLEAR
-
-
+    OP_CLEAR;
 
 
 
